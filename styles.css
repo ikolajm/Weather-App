@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0 auto;
+}
+
+main {
+  background: url("http://www.xsjjys.com/data/out/204/WHDQ-513410398.png");
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  color: white;
+  background: #303a713d;
+  box-shadow: 0 0 20px 3px #272727;
+  padding: 2rem;
+  line-height: 4rem;
+}
+
+#city {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.temperature {
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+.icon {
+  display: none;
+  height: 150px;
+  padding: 1rem;
+  filter: invert(1);
+}
+
+.active {
+  display: block;
+}
+
+#summary {
+  padding-top: 1rem;
+}

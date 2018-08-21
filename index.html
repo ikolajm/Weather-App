@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+  <!--GOOGLE FONTS-->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <!--MY CSS-->
+  <link rel="stylesheet" href="styles.css" type="text/css">
+
+  <title>Weather</title>
+  </head>
+
+  <body>
+
+    <main>
+
+      <div class="container">
+
+        <!--Location-->
+        <h1 id="city">City</h1>
+
+        <!--Icon-->
+        <div id="icon-list">
+          <img class="icon sunny active" src="https://cdn4.iconfinder.com/data/icons/vectory-weather-1/40/day_sunny_1-512.png" />
+          <img class="icon cloudy" src="https://image.flaticon.com/icons/png/512/53/53934.png" />
+          <img class="icon rainy" src="https://png.icons8.com/metro/1600/rain.png" />
+          <img class="icon snowy" src="https://png.icons8.com/metro/1600/snow.png" />
+        </div>
+        <!--Temperature-->
+        <div class="temperature">
+          <h1><span id="temperature">69</span><span>&deg;</span></h1>
+        </div>
+
+        <!--Weather Report-->
+        <div>
+          <!--Spoken Report (partly cloudy, etc...)-->
+          <h1 id="summary"><span id="description"></span>, high of <span id="high"></span>&deg;, low of <span id="low"></span>&deg;</h1>
+          <!--Humidity-->
+          <h1>Humidity: <span id="humidity"></span>%</h1>
+          <!--Wind-->
+          <h1>Wind: <span id="direction"></span> <span id="speed"></span>mph</h1>
+        </div>
+
+      </div>
+
+    </main>
+
+  <!--JQ-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--MY JS-->
+  <script src="main.js"></script>
+  </body>
+</html>
