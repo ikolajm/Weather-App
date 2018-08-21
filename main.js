@@ -3,6 +3,7 @@ var key = "a405644abe9fcda7350bf4a8c35eb1ba";
 
 // Global Variables
 var city;
+var icon;
 var temperature;
 var description;
 var high;
@@ -32,6 +33,7 @@ function sendRequest(url) {
       // Create weather object with location specific variables
       var weather = {};
       weather.city = data.city.name;
+      weather.icon = data.list[0].weather[0].id;
       weather.temperature = K2F(data.list[0].main.temp);
       weather.description = data.list[0].weather[0].description;
       weather.high = K2F(data.list[0].main.temp_max);
@@ -52,6 +54,7 @@ function sendRequest(url) {
 // Inner HTML functions (update placeholders)
 function update(weather) {
   city.innerHTML = weather.city;
+  icon.src = "imgs/codes/" + weather.icon + ".png"
   temperature.innerHTML = weather.temperature;
 
   // Make description capitalize at beginning of sentence
@@ -69,6 +72,7 @@ function update(weather) {
 // Init each variable on load
 window.onload = function() {
   city = document.getElementById("city");
+  icon = document.getElementById("icon");
   temperature = document.getElementById("temperature");
   description  = document.getElementById("description");
   high  = document.getElementById("high");
@@ -93,7 +97,7 @@ function mph(mps) {
   return Math.round(mps * 2.23694);
 }
 
-// Convert degrees to cardinal directions (credit: captaincoder)
+// Convert degrees to cardinal direction
 function degreesToDirection(degrees){
     var range = 360/8;
     var low = 360 - range/2;

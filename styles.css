@@ -3,6 +3,12 @@
   margin: 0 auto;
 }
 
+.title {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+}
+
 main {
   background: url("http://www.xsjjys.com/data/out/204/WHDQ-513410398.png");
   height: 100vh;
@@ -11,6 +17,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
@@ -31,15 +38,10 @@ main {
   font-size: 1.75rem;
 }
 
-.icon {
-  display: none;
+#icon {
+  display: block;
   height: 150px;
   padding: 1rem;
-  filter: invert(1);
-}
-
-.active {
-  display: block;
 }
 
 #summary {
